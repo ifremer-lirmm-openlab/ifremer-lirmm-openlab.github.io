@@ -1,8 +1,6 @@
-# Github Organization Guidelines (Mkdocs build)
+# Organisation Static Website
 
-> This documentation outlines the rules, conventions, and best practices for using this GitHub organization to share and collaborate on scientific resources. It serves as a guide to ensure consistent and effective source management across our team
-
-The documentation is available at : LINK HERE
+The website is available at : LINK HERE
 
 ## Overview
 
@@ -16,94 +14,36 @@ The documentation is built as a static HTML web site with Mkdocs (https://www.mk
 
 The rendering is configured with a config file at the root folder named `mkdocs.yml`.
 
-## Installation 
+## Setting the GitHub pipeline
 
-Installing mkdocs :
+Create the folder `.github/workflows/` and add a file nammed `deploy.yml` that have the following content
 
-```
-python -m pip install mkdocs
-```
+```yml
+name: Deploy MkDocs to GitHub Pages
 
-Installing mkdocs third-party themes
+on:
+  push:
+    branches:
+      - main  # Trigger deployment when changes are pushed to the main branch
 
-```
-python -m pip install mkdocs-material
-```
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-Other themes 
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
 
-```
-mkdocs-nature mkdocs-github mkdocs-gitbook mkdocs-custommill mkdocs-windmill mkdocs-theme-bootstrap4 mkdocs-ivory mkdocs-swan mkdocs-alabaster
-```
+      - name: Install Dependencies
+        run: |
+          pip install mkdocs mkdocs-material
 
-Best theme for scientific documentation are `material`, 
- `readthedocs`, `swan`, or `alabaster`
+      - name: Build and Deploy
+        run: |
+          mkdocs gh-deploy --force
 
-
-## Live HTML pages
-
-```
-python -m mkdocs serve
-```
-
-Open the this link in browser : http://127.0.0.1:8000/
-
-
-## Build site before deployment
-
-```
-python -m mkdocs build
-```
-
-The site ready-to-deploy is created in the `site/` folder.
-
-Add this to to .yml file to generate local HTML documentation with proper links.
-
-```
-site_url: ""
-use_directory_urls: false
-plugins: []
-```
-
-## Modify the page menu
-
-To change the way pages are shown in the site web, modify the `nav` section of the configuration file `mkdocs.yml` (see [Mkdocs documentation](https://www.mkdocs.org/user-guide/configuration/#documentation-layout))
-
-## Rendering LaTex equations
-
-To render LaTex equation embeded in your markdown document with `$ ... $` (inline equation) or with `$$ ... $$` (equation blocks) follow instruction on the [Mkdocs documentation](https://squidfunk.github.io/mkdocs-material/reference/math/#mathjax-mkdocsyml)  
-
-Step 1 : Add this to the .yml configuration file
-
-```
-markdown_extensions:
-  - pymdownx.arithmatex:
-      generic: true
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-```
-
-Step 2 : And Create a new file `mathjax.js` in folder `docs/javascripts/` with the following content
-
-```
-window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      ignoreHtmlClass: ".*|",
-      processHtmlClass: "arithmatex"
-    }
-  };
-  
-  document$.subscribe(() => { 
-    MathJax.startup.output.clearCache()
-    MathJax.typesetClear()
-    MathJax.texReset()
-    MathJax.typesetPromise()
-  })
 ```
