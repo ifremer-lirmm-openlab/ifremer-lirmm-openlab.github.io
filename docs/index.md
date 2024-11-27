@@ -1,16 +1,14 @@
-# GitHub Organization Guidelines
+![](./assets/logo_base_horizontal_bluetxt.png)
 
-This documentation provides guidelines for contributing to this GitHub organization.
-It includes rules, conventions, and best practices to to help contributors work together effectively while maintaining a structured and accessible organization for all projects.
+We are a collaborative and multidisciplinary research team bringing together scientists from [LIRMM-CNRS](https://www.lirmm.fr/lirmm-en/) (Laboratory of Informatics, Robotics, and Microelectronics, Montpellier) and [Ifremer](https://www.ifremer.fr/fr) (French Research Institute for the Exploitation of the Sea). We design and develop open-source hardware and software solutions for the observation and understanding of wildlife, ecosystems, and biodiversity.
 
-🚀 **To get started see the [General Guidelines](./general-guidelines.md).** 
+📋 **For the complete list of published repositories see [Official GitHub Repositories](./official-git-repo.md).**
 
-📋 For the complete list of published repositories see [Official GitHub Repositories](./official-git-repo.md).
+🚀 **To start contribution read the [GitHub Organization Guidelines](./general-guidelines.md).** 
 
-🖥️ For quick tips and commands related to Git, check out the [Tips for Git](./tips-for-git.md).
+🧪 **More about our work and people involved in [The Team and Research Activities](./team-research.md).**
 
-🔍 For more information on tools and workflows see [External Docs and Useful Links](./external-ressources-useful-links.md).
-
-<div style="text-align: center;">
-  <img src="assets/logo_ifremer_cnrs_github_git.png" alt="logo_ifremer_cnrs_github_git" width="500px"/>
-</div>
+> Contacts :
+> 
+> - Sylvain Bonhommeau (Researcher, Ifremer) : sylvain.bonhommeau@ifremer.fr
+> - Serge Bernard (Researcher, CNRS) : serge.bernard@lirmm.fr

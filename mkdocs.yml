@@ -1,10 +1,9 @@
-site_name: Github Organization Guidelines
+site_name: Ifremer-Lirmm Lab
 nav:
   - Home: ./index.md 
-  - General Guidelines: ./general-guidelines.md
   - Official GitHub Repositories: ./official-git-repo.md
-  - Tips for Git: ./tips-for-git.md
-  - External Docs and Useful Links: ./external-docs-useful-links.md
+  - GitHub Organization Guidelines: ./general-guidelines.md
+  - The Team and Research Activities: ./team-research.md
 markdown_extensions:
   - attr_list
   - pymdownx.arithmatex:

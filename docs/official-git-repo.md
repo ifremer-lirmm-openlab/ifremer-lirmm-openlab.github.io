@@ -1,39 +1,8 @@
 # Official GitHub Repositories
 
-This page provides access to the official Git repositories containing source files that have been published and referenced in scientific publications.
+This page provides access to the official Git repositories containing source files that have been published and referenced in scientific papers.
 
-**Table of content**
-
-- [Official GitHub Repositories](#official-github-repositories)
-  - [Software for loggers based on the IOT board](#software-for-loggers-based-on-the-iot-board)
-    - [LoRa logger for sea turtle tracking (version without GPS)](#lora-logger-for-sea-turtle-tracking-version-without-gps)
-    - [LoRa logger for sea turtle tracking (version with GPS)](#lora-logger-for-sea-turtle-tracking-version-with-gps)
-    - [LoRa logger for DCP monitoring](#lora-logger-for-dcp-monitoring)
-    - [LoRa logger to monitor fishes survival rates (TAAF version)](#lora-logger-to-monitor-fishes-survival-rates-taaf-version)
-    - [Multi-sensor general purpose logger](#multi-sensor-general-purpose-logger)
-  - [Software for loggers based on the FISHNCHIP board](#software-for-loggers-based-on-the-fishnchip-board)
-    - [Multi-sensor GPS LoRa Logger](#multi-sensor-gps-lora-logger)
-  - [CAD files for electronic boards](#cad-files-for-electronic-boards)
-    - [IOT board](#iot-board)
-    - [FISHNCHIP board (v1)](#fishnchip-board-v1)
-    - [FISHNCHIP board (v2)](#fishnchip-board-v2)
-  - [CAD files for 3D-printed casings](#cad-files-for-3d-printed-casings)
-    - [Casing for sea turtle tags](#casing-for-sea-turtle-tags)
-    - [Casing for uRlease tags](#casing-for-urlease-tags)
-  - [LoRa networks](#lora-networks)
-    - [Dataflux agent](#dataflux-agent)
-    - [Private LoRa server with Chirpstack](#private-lora-server-with-chirpstack)
-    - [LoRaShip simulator](#loraship-simulator)
-  - [Dataset](#dataset)
-    - [A bio-logging dataset on the diving behaviours of juvenile sea turtles from the southwestern Indian Ocean](#a-bio-logging-dataset-on-the-diving-behaviours-of-juvenile-sea-turtles-from-the-southwestern-indian-ocean)
-    - [A dataset of geolocalized LoRa message in marine conditions](#a-dataset-of-geolocalized-lora-message-in-marine-conditions)
-  - [Data visualisation](#data-visualisation)
-    - [Dashboard with Python / Dash framework](#dashboard-with-python--dash-framework)
-  - [Documentation](#documentation)
-    - [LoRaWAN sensors for wildlife monitoring in off-shore and coastal marine scenario](#lorawan-sensors-for-wildlife-monitoring-in-off-shore-and-coastal-marine-scenario)
-    - [GitHub Organization Guidelines (this documentation)](#github-organization-guidelines-this-documentation)
-
-
+![](./assets/banner_opensource_device_ifremer_lirmm.png)
 
 ## Software for loggers based on the IOT board
 
