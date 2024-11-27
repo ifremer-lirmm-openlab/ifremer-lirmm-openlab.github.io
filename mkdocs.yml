@@ -1,0 +1,26 @@
+site_name: Github Organization Guidelines
+nav:
+  - Home: ./index.md 
+  - General Guidelines: ./general-guidelines.md
+  - Official GitHub Repositories: ./official-git-repo.md
+  - Tips for Git: ./tips-for-git.md
+  - External Docs and Useful Links: ./external-docs-useful-links.md
+markdown_extensions:
+  - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+plugins:
+  - with-pdf:
+      render_js: true  # add this
+      headless_chrome_path: C:/Users/mjulien/AppData/Local/Chromium/Application/chrome.exe
+      output_path: ../Github_Organization_Guidelines.pdf
+      enabled_if_env: ENABLE_PDF_EXPORT
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+theme:
+  name: readthedocs
+  logo: ./assets/logo_base_horizontal_nolabname.png
+  palette:
+    primary: black
+    accent: indigo
