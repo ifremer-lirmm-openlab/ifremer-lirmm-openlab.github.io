@@ -4,11 +4,13 @@ We are a collaborative and multidisciplinary research team bringing together sci
 
 📋 **For the complete list of published repositories see [Official GitHub Repositories](./official-git-repo.md).**
 
-🚀 **To start contribution read the [GitHub Organization Guidelines](./general-guidelines.md).** 
+🚀 **To start contributing, first read the [GitHub Organization Guidelines](./general-guidelines.md).** 
 
 🧪 **More about our work and people involved in [The Team and Research Activities](./team-research.md).**
 
-> Contacts :
-> 
-> - Sylvain Bonhommeau (Researcher, Ifremer) : sylvain.bonhommeau@ifremer.fr
-> - Serge Bernard (Researcher, CNRS) : serge.bernard@lirmm.fr
+---
+
+Contacts :
+
+- Sylvain Bonhommeau (Researcher, Ifremer) : sylvain.bonhommeau@ifremer.fr
+- Serge Bernard (Researcher, CNRS) : serge.bernard@lirmm.fr
