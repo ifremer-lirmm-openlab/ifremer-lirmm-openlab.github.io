@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>GitHub Organization Guidelines - Ifremer-Lirmm Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "GitHub Organization Guidelines";
+        var mkdocs_page_input_path = "general-guidelines.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="../assets/logo_base_horizontal_nolabname.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../official-git-repo/">Official GitHub Repositories</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">GitHub Organization Guidelines</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#why-hosting-my-project-on-this-organization">Why hosting my project on this organization ?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#naming-conventions">Naming conventions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#general-best-practices-for-github-names">General best practices for GitHub names</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#naming-rules-for-specific-project-types">Naming rules for specific project types</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#embedded-softwares">Embedded softwares</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#electronic-boards-and-pcbs">Electronic boards and PCBs</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#3d-printed-models">3D-printed models</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#datasets-data-analysis-and-data-viewers">Datasets, Data analysis and Data viewers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#other-projects">Other projects</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-branches-during-developpement">Using branches during developpement</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#versioning-the-sources">Versioning the sources</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#structure-of-repositories">Structure of repositories</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#documenting-the-projects">Documenting the projects</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bonus-tips-and-useful-ressources">(Bonus) Tips and useful ressources</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#tips-for-git">Tips for git</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#external-docs-and-useful-links">External Docs and Useful Links</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#working-with-git">Working with Git</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#working-with-markdown-files">Working with Markdown files</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#choosing-an-open-source-license">Choosing an open source license</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#building-your-documentation">Building your documentation</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../team-research/">The Team and Research Activities</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Ifremer-Lirmm Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">GitHub Organization Guidelines</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="github-organization-guidelines">GitHub Organization Guidelines</h1>
+<p>This documentation provides guidelines for contributing to this GitHub organization.
+It includes rules, conventions, and best practices to to help contributors work together effectively.</p>
+<p><img alt="" src="../assets/logo_ifremer_cnrs_github_git.png" /></p>
+<p><strong>Topics :</strong></p>
+<ul>
+<li><a href="#why-hosting-my-project-on-this-organization-">Why hosting my project on this organization ?</a></li>
+<li><a href="#naming-conventions">Naming conventions</a></li>
+<li><a href="#using-branches-during-developpement">Using branches during developpement</a></li>
+<li><a href="#versioning-the-sources">Versioning the sources</a></li>
+<li><a href="#structure-of-repositories">Structure of repositories</a></li>
+<li><a href="#documenting-the-projects">Documenting the projects</a></li>
+<li><a href="#bonus-tips-and-useful-ressources">(Bonus) Tips and useful ressources</a></li>
+</ul>
+<hr />
+<h2 id="why-hosting-my-project-on-this-organization">Why hosting my project on this organization ?</h2>
+<ul>
+<li>If your project involves multiple contributors, potentially working in parallel.</li>
+<li>If it requires efficient change tracking with a detailed history.</li>
+<li>If versioning is essential for archiving or referencing in other works (e.g., papers, reports, or derivative projects).</li>
+<li>If it is designed to endure and evolve over time.</li>
+</ul>
+<p>This organization welcomes all types of development, including low-level software, 3D-printed models, electronic PCB designs, datasets, high-level applications, and more.</p>
+<p>💡 <em>This organization is intended for official public repositories. For temporary, sandbox, or experimental projects, it is recommended to use your personal GitHub account or the GitLab instances provided by IFREMER or LIRMM.</em></p>
+<h2 id="naming-conventions">Naming conventions</h2>
+<h3 id="general-best-practices-for-github-names">General best practices for GitHub names</h3>
+<ul>
+<li>Use descriptive names that clearly indicate the purpose or function of the project. </li>
+<li>Stick to lowercase and hyphens for readability and keep names short and concise. </li>
+<li>Avoid special characters, using only letters, numbers, and hyphens for compatibility.</li>
+<li>Finally, choose names that are future-proof and remain relevant as the project evolves.</li>
+<li>Ensure the name is unique and have fun choosing it !</li>
+</ul>
+<h3 id="naming-rules-for-specific-project-types">Naming rules for specific project types</h3>
+<p>We recommend the following naming conventions for the project types identified below. These are not strict rules but rather best practices to enhance readability.</p>
+<blockquote>
+<p>Legend : 
+<code>&lt;...&gt;</code> = word to replace. 
+<code>*</code> =  optional fields.</p>
+</blockquote>
+<h4 id="embedded-softwares">Embedded softwares</h4>
+<p>For projects involving source code or firmware targeting specific electronic platforms.</p>
+<p>Recommend naming convention :</p>
+<p><code>&lt;mainname&gt;-&lt;type&gt;-&lt;feature*&gt;-&lt;platform&gt;-firmware</code></p>
+<p>Description :</p>
+<ul>
+<li><code>mainname</code> : The primary name that relates to the application, project, institution, or a predefined special name.</li>
+<li><code>type</code> : the device's type or function.</li>
+<li><code>feature</code> : (optional) should relates to the main features, such as involved sensors, type of RF communication, algorithms, ...  </li>
+<li><code>platform</code> : the target platform name</li>
+</ul>
+<p>Examples : </p>
+<ul>
+<li><code>seaturtle-tag-depthlora-iotboard-firmware</code></li>
+<li><code>urelease-logger-depthgpslora-iotboard-firmware</code></li>
+<li><code>loraship-logger-gpslora-fncboard-firmware</code></li>
+<li><code>bia-sensor-embedfft-fncboard-firmware</code></li>
+<li><code>bananatwo-tracker-prestempargos-stm32l4-firmware</code></li>
+<li><code>echologgerS500-spicommunication-raspi-firmware</code></li>
+<li><code>edna-pumpcontroler-blueos-arduino-firmware</code></li>
+<li>...</li>
+</ul>
+<h4 id="electronic-boards-and-pcbs">Electronic boards and PCBs</h4>
+<p>For projects involving PCB design and fabrication of electronic board. These serve to share the source including BOM, PCB layout, 2D/3D model, datasheet, ...  </p>
+<p>Recommend naming convention :</p>
+<p><code>&lt;mainname&gt;-&lt;feature*&gt;-&lt;version*&gt;-cadfiles</code></p>
+<p>Description :</p>
+<ul>
+<li><code>mainname</code> : The primary name that relates to the application, project, institution, or a predefined special name.</li>
+<li><code>feature</code> : (optional) should relates to the main features, such as the embeded sensors, major or new functions, type, ... </li>
+<li><code>version</code> : (optional) Use it to differentiate major changes in design, if all version will be maintained over time.</li>
+</ul>
+<p>Examples : </p>
+<ul>
+<li><code>iotboard-multisensorlora-cadfiles</code></li>
+<li><code>fncboard-multisensorlora-v1-cadfiles</code></li>
+<li><code>fncboard-multisensor-v2-cadfiles</code></li>
+<li><code>biaboard-externadc-cadfiles</code></li>
+<li><code>argoskineis-daugtherboard-v1-cadfiles</code></li>
+<li><code>cricketl0-assettrackerlora-cadfiles</code></li>
+<li>...</li>
+</ul>
+<h4 id="3d-printed-models">3D-printed models</h4>
+<p>Projects to share sources of 3D-printed design.</p>
+<p>Recommend naming convention :</p>
+<p><code>&lt;mainname&gt;-&lt;type*&gt;-&lt;feature*&gt;-&lt;version*&gt;-3dmodel</code></p>
+<p>Description :</p>
+<ul>
+<li><code>mainname</code> : The primary name that relates to the application, project, institution, or a predefined special name.</li>
+<li><code>feature</code> : (optional) should relates to the main features or specificity.</li>
+<li><code>version</code> : (optional) Use it to differentiate major changes in design, if all version will be maintained over time.</li>
+</ul>
+<p>Examples : </p>
+<ul>
+<li><code>seaturtle-tag-externant-v1-3dmodel</code></li>
+<li><code>fish-tag-survivalrate-v1-3dmodel</code></li>
+<li><code>urelease-tag-magconnector-3dmodel</code></li>
+<li><code>dcp-logger-solarpowered-3dmodel</code></li>
+<li><code>plancha-antennasupport-circular-3dmodel</code></li>
+<li>...</li>
+</ul>
+<h3 id="datasets-data-analysis-and-data-viewers">Datasets, Data analysis and Data viewers</h3>
+<p>Projects to share dataset, analysis scripts, data workflow, ...
+Oten demanded by scientific journals to support the publication. </p>
+<p>Recommend naming convention :</p>
+<p><code>&lt;anyname&gt;-dataset</code>, <code>&lt;anyname&gt;-dataprocessing</code>,  <code>&lt;anyname&gt;-workflow</code>, <code>&lt;anyname&gt;-dashboard</code> or <code>&lt;anyname&gt;-dataviewer</code></p>
+<p>Names can have a <code>&lt;version&gt;</code> field at the end if need.</p>
+<p>Description :</p>
+<ul>
+<li><code>anyname</code> : Any names that reflects the content. Names should be future-proof if cited in publication.</li>
+</ul>
+<p>Examples : </p>
+<ul>
+<li><code>seaturtle-tag-diving-indianocean-2022-dataset</code></li>
+<li><code>plancha-workflow-v1</code></li>
+<li><code>loraship-expe-autoreport-dataprocessing</code></li>
+<li><code>urelease-taaf-dashboard</code></li>
+<li>...</li>
+</ul>
+<h3 id="other-projects">Other projects</h3>
+<p>Be inventive or descriptive and follow best practices!</p>
+<p>Examples : </p>
+<ul>
+<li><code>DinoVdeau</code></li>
+<li><code>dataflux-agent</code></li>
+<li><code>lora-sensors-in-marine-scenario-mkdocs</code></li>
+<li><code>loraship-toolbox</code></li>
+<li>...</li>
+</ul>
+<h2 id="using-branches-during-developpement">Using branches during developpement</h2>
+<p>Branching is one of Git’s most powerful features to help you avoid mixing up different lines of development. You should use branches extensively in your development workflows: for new features, bug fixes, experiments, ideas…</p>
+<p>For most of our developments, we recommend following the standardized <strong>GitHub Flow</strong> (see image below). This approach involves maintaining a <code>main</code> branch while creating parallel branches for new features or bug fixes. These branches are regularly merged back into <code>main</code> once the code is stable and reviewed. Stable states of the <code>main</code> branch are marked using <em>tags</em> and the <em>release</em> mechanism for archiving and future reference (see the section <a href="#versioning-the-sources">Versioning the Sources</a> below).</p>
+<p><img alt="" src="../assets/github_workflow_diagram.png" /></p>
+<p><em>Figure. Illustration of the GitHub Flow. <a href="https://medium.com/@sreekanth.thummala/choosing-the-right-git-branching-strategy-a-comparative-analysis-f5e635443423">Image source</a>.</em></p>
+<p>🔍 Consult these links for more details about git branches and the GitHub workflow :</p>
+<ul>
+<li><a href="https://about.gitlab.com/topics/version-control/version-control-best-practices/">https://about.gitlab.com/topics/version-control/version-control-best-practices/</a></li>
+<li><a href="https://docs.github.com/en/get-started/using-github/github-flow">https://docs.github.com/en/get-started/using-github/github-flow</a></li>
+<li><a href="https://medium.com/@sreekanth.thummala/choosing-the-right-git-branching-strategy-a-comparative-analysis-f5e635443423">https://medium.com/@sreekanth.thummala/choosing-the-right-git-branching-strategy-a-comparative-analysis-f5e635443423</a></li>
+</ul>
+<h2 id="versioning-the-sources">Versioning the sources</h2>
+<p>Git provides powerful features for tracking and managing source versions through objects called <em>Tags</em> and <em>Releases</em>.  <em>Releases</em> are deployable software iterations you can package and make available for a wider audience to download and use. Releases are based on <em>Tags</em>, which mark a specific point in your repository's history. </p>
+<p>In our workflow, we will use <em>Tags</em> and <em>Releases</em> to mark important steps during the project lifetime.
+These include versions used for specific experiments, final designs intended for production or fabrication, and project states that need to be referenced in technical reports or scientific papers.</p>
+<p>Namming the versions follows a standardized procedure that is based on the <a href="https://semver.org/">Semantic Versioning 2.0.0</a> specification.</p>
+<p>Recommend naming convention : </p>
+<p><code>v&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;-&lt;extraname*&gt;</code></p>
+<p>Description :</p>
+<ul>
+<li><code>major</code> : Major increments when new functionality is not backwards compatible</li>
+<li><code>minor</code> : Minor increments every time backwards compatible functionality is added.</li>
+<li><code>patch</code> : Patch increments every time you release a build with bug fixes or small changes.</li>
+<li><code>extraname</code> : (Optional) this field can serve to add a more readable information to better identify the purpose of this release.</li>
+</ul>
+<p>Examples : </p>
+<ul>
+<li><code>v1.0.0</code> (start of the design. Version below that are test ones that wont be published)</li>
+<li><code>v1.0.5</code> (small changes or bug fixes)</li>
+<li><code>v1.1.0</code> (new feature added)</li>
+<li><code>v1.1.2-expemalte2022</code> (version used for experiment in Malte in 2022)</li>
+<li><code>v1.1.3-papernature2023</code> (version referenced in a publication in 2023)</li>
+<li><code>v2.0.0</code> (marks major changes were the design has changed a lots in term of functionnalities)</li>
+<li>...</li>
+</ul>
+<p>🔍 Consult this link to learn how to create a <em>Tags</em> and <em>Releases</em> for a GitHub project : 
+<a href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository?tool=webui">https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository?tool=webui</a>.</p>
+<p>💡 <em>A specific case where multiple versions of a design require separate repositories arises when these versions will be independant, both maintained and will evolve in parallel. In such situations, it is best to create a dedicated Git repository for each version, using names that relates to each others.</em></p>
+<h2 id="structure-of-repositories">Structure of repositories</h2>
+<p>Text.</p>
+<h2 id="documenting-the-projects">Documenting the projects</h2>
+<p>Text.</p>
+<h2 id="bonus-tips-and-useful-ressources">(Bonus) Tips and useful ressources</h2>
+<h3 id="tips-for-git">Tips for git</h3>
+<p>Cloning a git repository to your machine </p>
+<pre><code># Replace `owner/repo` with the owner and name of the repository to clone
+git clone https://github.com/owner/repo.git
+
+# change into the `repo` directory
+cd repo
+</code></pre>
+<p>Checking and publishing changes on the <code>main</code> branch</p>
+<pre><code># check the sate of your local files against the distant repository
+git status
+
+# make changes to local files
+# for example, edit `file1.md` and `file2.md` using the text editor
+
+# stage the changed files
+git add file1.md file2.md
+
+# take a snapshot of the staging area (anything that's been added)
+git commit -m &quot;my commit message&quot;
+
+# push changes to github
+git push origin main
+</code></pre>
+<p>Creating and modifying a new branch</p>
+<pre><code># create a new branch to store any new changes
+git branch my-branch
+
+# switch to that branch (line of development)
+git checkout my-branch
+
+# make changes, for example, edit `file1.md` and `file2.md` using the text editor
+
+# stage the changed files
+git add file1.md file2.md
+
+# take a snapshot of the staging area (anything that's been added)
+git commit -m &quot;my commit message&quot;
+
+# push changes to github
+git push --set-upstream origin my-branch
+</code></pre>
+<h3 id="external-docs-and-useful-links">External Docs and Useful Links</h3>
+<h4 id="working-with-git">Working with Git</h4>
+<p>Basis for Git :</p>
+<p><a href="https://docs.github.com/en/get-started/using-git">https://docs.github.com/en/get-started/using-git</a></p>
+<p><a href="https://git-scm.com/docs">https://git-scm.com/docs</a></p>
+<p>Git with Visual Studio Code :</p>
+<p><a href="https://code.visualstudio.com/docs/sourcecontrol/intro-to-git">https://code.visualstudio.com/docs/sourcecontrol/intro-to-git</a></p>
+<h4 id="working-with-markdown-files">Working with Markdown files</h4>
+<p>Getting started : </p>
+<p><a href="https://www.markdownguide.org/getting-started/">https://www.markdownguide.org/getting-started/</a></p>
+<p>Basic syntax : </p>
+<p><a href="https://www.markdownguide.org/basic-syntax/">https://www.markdownguide.org/basic-syntax/</a></p>
+<p>Markdown in Python :</p>
+<p><a href="https://www.honeybadger.io/blog/python-markdown/">https://www.honeybadger.io/blog/python-markdown/</a></p>
+<p><a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_markdown.html">https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_markdown.html</a></p>
+<h4 id="choosing-an-open-source-license">Choosing an open source license</h4>
+<p>List of commons open-source license :</p>
+<p><a href="https://choosealicense.com/">https://choosealicense.com/</a></p>
+<p><a href="https://choosealicense.com/appendix/">https://choosealicense.com/appendix/</a></p>
+<p>The MIT license : </p>
+<p><a href="https://en.wikipedia.org/wiki/MIT_License">https://en.wikipedia.org/wiki/MIT_License</a></p>
+<p>The Creative Commons license : </p>
+<p><a href="https://creativecommons.org/share-your-work/cclicenses/">https://creativecommons.org/share-your-work/cclicenses/</a></p>
+<h4 id="building-your-documentation">Building your documentation</h4>
+<p>Using Mkdocs tool :</p>
+<p><a href="https://www.mkdocs.org/getting-started/">https://www.mkdocs.org/getting-started/</a></p>
+<p>Using GitHub pages :</p>
+<p><a href="https://docs.github.com/en/pages/getting-started-with-github-pages">https://docs.github.com/en/pages/getting-started-with-github-pages</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../official-git-repo/" class="btn btn-neutral float-left" title="Official GitHub Repositories"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../team-research/" class="btn btn-neutral float-right" title="The Team and Research Activities">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../official-git-repo/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../team-research/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../javascripts/mathjax.js"></script>
+      <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

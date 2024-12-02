@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Official GitHub Repositories - Ifremer-Lirmm Lab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Official GitHub Repositories";
+        var mkdocs_page_input_path = "official-git-repo.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="../assets/logo_base_horizontal_nolabname.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Official GitHub Repositories</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#software-for-loggers-based-on-the-iot-board">Software for loggers based on the IOT board</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#lora-logger-for-sea-turtle-tracking-version-without-gps">LoRa logger for sea turtle tracking (version without GPS)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#lora-logger-for-sea-turtle-tracking-version-with-gps">LoRa logger for sea turtle tracking (version with GPS)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#lora-logger-for-dcp-monitoring">LoRa logger for DCP monitoring</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#lora-logger-to-monitor-fishes-survival-rates-taaf-version">LoRa logger to monitor fishes survival rates (TAAF version)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#multi-sensor-general-purpose-logger">Multi-sensor general purpose logger</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#software-for-loggers-based-on-the-fishnchip-board">Software for loggers based on the FISHNCHIP board</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#multi-sensor-gps-lora-logger">Multi-sensor GPS LoRa Logger</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cad-files-for-electronic-boards">CAD files for electronic boards</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#iot-board">IOT board</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fishnchip-board-v1">FISHNCHIP board (v1)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fishnchip-board-v2">FISHNCHIP board (v2)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cad-files-for-3d-printed-casings">CAD files for 3D-printed casings</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#casing-for-sea-turtle-tags">Casing for sea turtle tags</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#casing-for-urlease-tags">Casing for uRlease tags</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lora-networks">LoRa networks</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#dataflux-agent">Dataflux agent</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#private-lora-server-with-chirpstack">Private LoRa server with Chirpstack</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#loraship-simulator">LoRaShip simulator</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dataset">Dataset</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#a-bio-logging-dataset-on-the-diving-behaviours-of-juvenile-sea-turtles-from-the-southwestern-indian-ocean">A bio-logging dataset on the diving behaviours of juvenile sea turtles from the southwestern Indian Ocean</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#a-dataset-of-geolocalized-lora-message-in-marine-conditions">A dataset of geolocalized LoRa message in marine conditions</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-visualisation">Data visualisation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#lora-loggers-online-portal">LoRa loggers online-portal</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dashboard-with-python-dash-framework">Dashboard with Python / Dash framework</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#lorawan-sensors-for-wildlife-monitoring-in-off-shore-and-coastal-marine-scenario">LoRaWAN sensors for wildlife monitoring in off-shore and coastal marine scenario</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#github-organization-guidelines-this-documentation">GitHub Organization Guidelines (this documentation)</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../general-guidelines/">GitHub Organization Guidelines</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../team-research/">The Team and Research Activities</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Ifremer-Lirmm Lab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Official GitHub Repositories</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="official-github-repositories">Official GitHub Repositories</h1>
+<p>This page provides access to the official Git repositories for work that have been published or referenced in scientific papers.</p>
+<p><img alt="" src="../assets/banner_opensource_device_ifremer_lirmm.png" /></p>
+<p><strong>Categories</strong></p>
+<ul>
+<li><a href="#software-for-loggers-based-on-the-iot-board">Software for loggers based on the IOT board</a></li>
+<li><a href="#software-for-loggers-based-on-the-fishnchip-board">Software for loggers based on the FISHNCHIP board</a></li>
+<li><a href="#cad-files-for-electronic-boards">CAD files for electronic boards</a></li>
+<li><a href="#cad-files-for-3d-printed-casings">CAD files for 3D-printed casings</a></li>
+<li><a href="#lora-networks">LoRa networks</a></li>
+<li><a href="#dataset">Dataset</a></li>
+<li><a href="#data-visualisation">Data visualisation</a></li>
+<li><a href="#documentation">Documentation</a></li>
+</ul>
+<h2 id="software-for-loggers-based-on-the-iot-board">Software for loggers based on the IOT board</h2>
+<h3 id="lora-logger-for-sea-turtle-tracking-version-without-gps">LoRa logger for sea turtle tracking (version without GPS)</h3>
+<p>A LoRaWAN logger dedicated to sea turtle tracking that transmits real-time data of temperature, surface events and dive profile using the LoRa/LoRaWAN technology.
+This device has been used within the IOT project for experimentations in Europa, Mayotte, Aldabra and Reunion (2021-2022).</p>
+<p><a href="https://gitlab.ifremer.fr/sb2-team/iot-tag">https://gitlab.ifremer.fr/sb2-team/iot-tag</a></p>
+<h3 id="lora-logger-for-sea-turtle-tracking-version-with-gps">LoRa logger for sea turtle tracking (version with GPS)</h3>
+<p>(On going ...)</p>
+<h3 id="lora-logger-for-dcp-monitoring">LoRa logger for DCP monitoring</h3>
+<p>A LoRaWAN logger dedicated to real-time DCP monitoring.
+This device has been used for experimentation with the CRPMEM in the Reunion Island (2024).</p>
+<p><a href="https://gitlab.ifremer.fr/sb2-team/dcp-iotboard-logger">https://gitlab.ifremer.fr/sb2-team/dcp-iotboard-logger</a></p>
+<h3 id="lora-logger-to-monitor-fishes-survival-rates-taaf-version">LoRa logger to monitor fishes survival rates (TAAF version)</h3>
+<p>A LoRaWAN logger dedicated to monitor survival rates of marine animals after capture and release. The device records underwater temperature and pressure data, then pops after a predifined date and sends the measurement throuhg LoRa while at surface.
+This device has been used with the TAAF for experiments on sleeper sharks (2024).</p>
+<p><a href="https://gitlab.ifremer.fr/sb2-team/urelease-logger-taaf">https://gitlab.ifremer.fr/sb2-team/urelease-logger-taaf</a></p>
+<h3 id="multi-sensor-general-purpose-logger">Multi-sensor general purpose logger</h3>
+<p>A general purpose logger with no RF communication that read the accelero, the magneto, the temperature, pressure sensors and store the results in the embeded flash memory with compression technique. The configuration is onne through a console user interface, flash dump and quick plots automatized with Python scripts.
+This device has been used within the TALE project for experimentation on the ship OSIRIS II (2022).</p>
+<p><a href="https://gitlab.ifremer.fr/sb2-team/iotboard-allinone-logger">https://gitlab.ifremer.fr/sb2-team/iotboard-allinone-logger</a></p>
+<h2 id="software-for-loggers-based-on-the-fishnchip-board">Software for loggers based on the FISHNCHIP board</h2>
+<h3 id="multi-sensor-gps-lora-logger">Multi-sensor GPS LoRa Logger</h3>
+<p>A LoRaWAN GNSS logger based on the FISHNCHIP board that periodically sends GPS position and environmental measurements (pressure, temperature). The device is configured through a console user interface.
+This device has been used within the LoRaShip project (2023-2024).</p>
+<p><a href="https://gitlab.ifremer.fr/sb2-team/loraship-fnc-gnss-logger">https://gitlab.ifremer.fr/sb2-team/loraship-fnc-gnss-logger</a></p>
+<h2 id="cad-files-for-electronic-boards">CAD files for electronic boards</h2>
+<h3 id="iot-board">IOT board</h3>
+<p>(on going...)</p>
+<h3 id="fishnchip-board-v1">FISHNCHIP board (v1)</h3>
+<p>(on going...)</p>
+<h3 id="fishnchip-board-v2">FISHNCHIP board (v2)</h3>
+<p>(on going...)</p>
+<h2 id="cad-files-for-3d-printed-casings">CAD files for 3D-printed casings</h2>
+<h3 id="casing-for-sea-turtle-tags">Casing for sea turtle tags</h3>
+<p>(on going...)</p>
+<h3 id="casing-for-urlease-tags">Casing for uRlease tags</h3>
+<p>(on going...)</p>
+<h2 id="lora-networks">LoRa networks</h2>
+<h3 id="dataflux-agent">Dataflux agent</h3>
+<p>Lightweight Python agent called Dataflux, which establishes a continuous connection between LoRa servers (TTN, Chirpstack, Orange) and a database (InfluxDB v2) using the MQTT protocol. </p>
+<p><a href="https://gitlab.ifremer.fr/sb2-team/dataflux-agent/-/wikis/home">https://gitlab.ifremer.fr/sb2-team/dataflux-agent</a></p>
+<h3 id="private-lora-server-with-chirpstack">Private LoRa server with Chirpstack</h3>
+<p>Sources and executables for a private LoRa network dedicated to natural and remote sites with very limited internet acces.
+This custom network is composed of a meshed network of secondary gateways that have no internet, a main gateway connected to the internet via satelite and a distant server that emulate a classical LoRa network and bridges with a Chirpstack LoRa server.</p>
+<p><a href="https://gitlab.ifremer.fr/sb2-team/iot-gateway-layer-chirpstack">https://gitlab.ifremer.fr/sb2-team/iot-gateway-layer-chirpstack</a></p>
+<h3 id="loraship-simulator">LoRaShip simulator</h3>
+<p>Python scripts for the simulation and analysis of LoRa network performances in coastal and off-shore marine scenario.</p>
+<p><a href="https://gitlab.ifremer.fr/sb2-team/loraship-simulator">https://gitlab.ifremer.fr/sb2-team/loraship-simulator</a></p>
+<p>"Toolbox" project : <a href="https://gitlab.ifremer.fr/sb2-team/loraship-toolbox">https://gitlab.ifremer.fr/sb2-team/loraship-toolbox</a></p>
+<h2 id="dataset">Dataset</h2>
+<h3 id="a-bio-logging-dataset-on-the-diving-behaviours-of-juvenile-sea-turtles-from-the-southwestern-indian-ocean">A bio-logging dataset on the diving behaviours of juvenile sea turtles from the southwestern Indian Ocean</h3>
+<p>Python scripts to access, process and analyze data produced within the Indian Ocean sea Turtles project (IOT, 2018-2021, Ifremer/CNRS)</p>
+<p><a href="https://gitlab.ifremer.fr/mj31fbe/iot-data-processing-meepaper2024">https://gitlab.ifremer.fr/mj31fbe/iot-data-processing-meepaper2024</a></p>
+<h3 id="a-dataset-of-geolocalized-lora-message-in-marine-conditions">A dataset of geolocalized LoRa message in marine conditions</h3>
+<p>(... on going ...)</p>
+<h2 id="data-visualisation">Data visualisation</h2>
+<h3 id="lora-loggers-online-portal">LoRa loggers online-portal</h3>
+<p>(... on going ...)</p>
+<h3 id="dashboard-with-python-dash-framework">Dashboard with Python / Dash framework</h3>
+<p>Interactive dashboard with Python / Dash framework to visualize logger data (... to be updated ...)</p>
+<h2 id="documentation">Documentation</h2>
+<h3 id="lorawan-sensors-for-wildlife-monitoring-in-off-shore-and-coastal-marine-scenario">LoRaWAN sensors for wildlife monitoring in off-shore and coastal marine scenario</h3>
+<p>This documentation brings together a range of work on LoRa connectivity in the marine environment, dedicated to the observation of marine fauna, ecosystems and fisheries.</p>
+<p><a href="https://gitlab.ifremer.fr/sb2-team/lora-sensors-in-marine-scenario-mkdocs">https://gitlab.ifremer.fr/sb2-team/lora-sensors-in-marine-scenario-mkdocs</a></p>
+<h3 id="github-organization-guidelines-this-documentation">GitHub Organization Guidelines (this documentation)</h3>
+<p>This documentation provides guidelines for contributing to this GitHub organization.</p>
+<p><a href="https://gitlab.ifremer.fr/mj31fbe/github-organization-guidelines-mkdocs">https://gitlab.ifremer.fr/mj31fbe/github-organization-guidelines-mkdocs</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../general-guidelines/" class="btn btn-neutral float-right" title="GitHub Organization Guidelines">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../general-guidelines/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../javascripts/mathjax.js"></script>
+      <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
