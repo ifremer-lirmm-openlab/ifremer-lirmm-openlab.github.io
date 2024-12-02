@@ -1,11 +1,23 @@
 # GitHub Organization Guidelines
 
 This documentation provides guidelines for contributing to this GitHub organization.
-It includes rules, conventions, and best practices to to help contributors work together effectively while maintaining a structured and accessible organization for all projects.
+It includes rules, conventions, and best practices to to help contributors work together effectively.
 
 ![](./assets/logo_ifremer_cnrs_github_git.png)
 
-## Why hosting my project on this GitHub organization ?
+**Topics :**
+
+- [Why hosting my project on this organization ?](#why-hosting-my-project-on-this-organization-)
+- [Naming conventions](#naming-conventions)
+- [Using branches during developpement](#using-branches-during-developpement)
+- [Versioning the sources](#versioning-the-sources)
+- [Structure of repositories](#structure-of-repositories)
+- [Documenting the projects](#documenting-the-projects)
+- [(Bonus) Tips and useful ressources](#bonus-tips-and-useful-ressources)
+
+---
+
+## Why hosting my project on this organization ?
 
 - If your project involves multiple contributors, potentially working in parallel.
 - If it requires efficient change tracking with a detailed history.
@@ -21,11 +33,11 @@ This organization welcomes all types of development, including low-level softwar
 
 ### General best practices for GitHub names
 
-Use descriptive names that clearly indicate the purpose or function of the project. 
-Stick to lowercase and hyphens for readability and keep names short and concise. 
-Avoid special characters, using only letters, numbers, and hyphens for compatibility. Include context or scope when relevant. 
-Finally, choose names that are future-proof and remain relevant as the project evolves.
-Ensure the name is unique and have fun choosing it !
+- Use descriptive names that clearly indicate the purpose or function of the project. 
+- Stick to lowercase and hyphens for readability and keep names short and concise. 
+- Avoid special characters, using only letters, numbers, and hyphens for compatibility.
+- Finally, choose names that are future-proof and remain relevant as the project evolves.
+- Ensure the name is unique and have fun choosing it !
 
 ### Naming rules for specific project types
 
@@ -63,7 +75,7 @@ Examples :
 
 #### Electronic boards and PCBs
 
-For project invoving PCB design and fabrication of electronic board. Serves to share the source including BOM, PCB layout, 2D/3D model, datasheet, ...  
+For projects involving PCB design and fabrication of electronic board. These serve to share the source including BOM, PCB layout, 2D/3D model, datasheet, ...  
 
 Recommend naming convention :
 
@@ -87,7 +99,7 @@ Examples :
 
 #### 3D-printed models
 
-Text.
+Projects to share sources of 3D-printed design.
 
 Recommend naming convention :
 
@@ -104,7 +116,6 @@ Examples :
 - `seaturtle-tag-externant-v1-3dmodel`
 - `fish-tag-survivalrate-v1-3dmodel`
 - `urelease-tag-magconnector-3dmodel`
-- `urelease-frontnose-tungstenwire-v2-3dmodel`
 - `dcp-logger-solarpowered-3dmodel`
 - `plancha-antennasupport-circular-3dmodel`
 - ...
@@ -132,9 +143,6 @@ Examples :
 - `urelease-taaf-dashboard`
 - ...
 
-### Multi-Purpose Projects
-
-Text.
 
 ### Other projects
 
@@ -148,19 +156,66 @@ Examples :
 - `loraship-toolbox`
 - ...
 
+## Using branches during developpement
+
+Branching is one of Git’s most powerful features to help you avoid mixing up different lines of development. You should use branches extensively in your development workflows: for new features, bug fixes, experiments, ideas…
+
+For most of our developments, we recommend following the standardized **GitHub Flow** (see image below). This approach involves maintaining a `main` branch while creating parallel branches for new features or bug fixes. These branches are regularly merged back into `main` once the code is stable and reviewed. Stable states of the `main` branch are marked using *tags* and the *release* mechanism for archiving and future reference (see the section [Versioning the Sources](#versioning-the-sources) below).
+
+![](./assets/github_workflow_diagram.png)
+
+*Figure. Illustration of the GitHub Flow. [Image source](https://medium.com/@sreekanth.thummala/choosing-the-right-git-branching-strategy-a-comparative-analysis-f5e635443423).*
+
+🔍 Consult these links for more details about git branches and the GitHub workflow :
+
+- [https://about.gitlab.com/topics/version-control/version-control-best-practices/](https://about.gitlab.com/topics/version-control/version-control-best-practices/)
+- [https://docs.github.com/en/get-started/using-github/github-flow](https://docs.github.com/en/get-started/using-github/github-flow)
+- [https://medium.com/@sreekanth.thummala/choosing-the-right-git-branching-strategy-a-comparative-analysis-f5e635443423](https://medium.com/@sreekanth.thummala/choosing-the-right-git-branching-strategy-a-comparative-analysis-f5e635443423)
 
 
 ## Versioning the sources
 
+Git provides powerful features for tracking and managing source versions through objects called *Tags* and *Releases*.  *Releases* are deployable software iterations you can package and make available for a wider audience to download and use. Releases are based on *Tags*, which mark a specific point in your repository's history. 
+
+In our workflow, we will use *Tags* and *Releases* to mark important steps during the project lifetime.
+These include versions used for specific experiments, final designs intended for production or fabrication, and project states that need to be referenced in technical reports or scientific papers.
+
+Namming the versions follows a standardized procedure that is based on the [Semantic Versioning 2.0.0](https://semver.org/) specification.
+
+Recommend naming convention : 
+
+`v<major>.<minor>.<patch>-<extraname*>`
+
+Description :
+
+- `major` : Major increments when new functionality is not backwards compatible
+- `minor` : Minor increments every time backwards compatible functionality is added.
+- `patch` : Patch increments every time you release a build with bug fixes or small changes.
+- `extraname` : (Optional) this field can serve to add a more readable information to better identify the purpose of this release.
+
+Examples : 
+
+- `v1.0.0` (start of the design. Version below that are test ones that wont be published)
+- `v1.0.5` (small changes or bug fixes)
+- `v1.1.0` (new feature added)
+- `v1.1.2-expemalte2022` (version used for experiment in Malte in 2022)
+- `v1.1.3-papernature2023` (version referenced in a publication in 2023)
+- `v2.0.0` (marks major changes were the design has changed a lots in term of functionnalities)
+- ...
+
+🔍 Consult this link to learn how to create a *Tags* and *Releases* for a GitHub project : 
+[https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository?tool=webui](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository?tool=webui).
+
+
+💡 *A specific case where multiple versions of a design require separate repositories arises when these versions will be independant, both maintained and will evolve in parallel. In such situations, it is best to create a dedicated Git repository for each version, using names that relates to each others.*
+
+
+
+
+## Structure of repositories
+
 Text.
 
-## Structure for the repositories
-
-Text.
-
-## Publishing rules
-
-Text.
 
 ## Documenting the projects
 
