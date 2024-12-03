@@ -9,10 +9,10 @@ It includes rules, conventions, and best practices to to help contributors work 
 
 - [Why hosting my project on this organization ?](#why-hosting-my-project-on-this-organization-)
 - [Naming conventions](#naming-conventions)
-- [Using branches during developpement](#using-branches-during-developpement)
+- [Collaborative workflows (branches, issues and pull-requests)](#collaborative-workflows-branches-issues-and-pull-requests)
 - [Versioning the sources](#versioning-the-sources)
-- [Structure of repositories](#structure-of-repositories)
 - [Documenting the projects](#documenting-the-projects)
+- [Structure for the repositories](#structure-for-the-repositories)
 - [(Bonus) Tips and useful ressources](#bonus-tips-and-useful-ressources)
 
 ---
@@ -27,7 +27,6 @@ It includes rules, conventions, and best practices to to help contributors work 
 This organization welcomes all types of development, including low-level software, 3D-printed models, electronic PCB designs, datasets, high-level applications, and more.
 
 💡 *This organization is intended for official public repositories. For temporary, sandbox, or experimental projects, it is recommended to use your personal GitHub account or the GitLab instances provided by IFREMER or LIRMM.*
-
 
 ## Naming conventions
 
@@ -143,7 +142,6 @@ Examples :
 - `urelease-taaf-dashboard`
 - ...
 
-
 ### Other projects
 
 Be inventive or descriptive and follow best practices!
@@ -156,28 +154,40 @@ Examples :
 - `loraship-toolbox`
 - ...
 
-## Using branches during developpement
+## Collaborative workflows (branches, issues and pull-requests)
 
-Branching is one of Git’s most powerful features to help you avoid mixing up different lines of development. You should use branches extensively in your development workflows: for new features, bug fixes, experiments, ideas…
+Collaborating on a project is easier with Git tools like branches, issues, and pull requests. These features help teams work on different tasks, track progress, and review changes before merging them into the main project.
 
-For most of our developments, we recommend following the standardized **GitHub Flow** (see image below). This approach involves maintaining a `main` branch while creating parallel branches for new features or bug fixes. These branches are regularly merged back into `main` once the code is stable and reviewed. Stable states of the `main` branch are marked using *tags* and the *release* mechanism for archiving and future reference (see the section [Versioning the Sources](#versioning-the-sources) below).
+Branching is one of Git’s most powerful features to help you avoid mixing up different lines of development. For most of our developments, we recommend following the standardized **GitHub Flow** (see image below). 
+
+This approach involves maintaining a `main` branch stable while creating parallel branches for new features, bug fixes or paralell developpement. These branches are regularly merged back into `main` once the code is stable and reviewed (see next section [Using Git issues and pull-request](#using-git-issues-and-pull-request))
 
 ![](./assets/github_workflow_diagram.png)
 
 *Figure. Illustration of the GitHub Flow. [Image source](https://medium.com/@sreekanth.thummala/choosing-the-right-git-branching-strategy-a-comparative-analysis-f5e635443423).*
 
-🔍 Consult these links for more details about git branches and the GitHub workflow :
 
-- [https://about.gitlab.com/topics/version-control/version-control-best-practices/](https://about.gitlab.com/topics/version-control/version-control-best-practices/)
-- [https://docs.github.com/en/get-started/using-github/github-flow](https://docs.github.com/en/get-started/using-github/github-flow)
-- [https://medium.com/@sreekanth.thummala/choosing-the-right-git-branching-strategy-a-comparative-analysis-f5e635443423](https://medium.com/@sreekanth.thummala/choosing-the-right-git-branching-strategy-a-comparative-analysis-f5e635443423)
+Git issues should be used to track tasks, bugs, and feature requests, providing clear descriptions and relevant labels to organize and prioritize work. Each issue should be concise but detailed enough to guide contributors. 
 
+Pull requests (PRs) are essential for reviewing and merging code changes. A PR should reference the issue it addresses and include a clear summary of the changes made. It is best practice to keep PRs small and focused, making them easier to review and reducing the risk of introducing errors. 
+
+**Always request a review from team members before merging with the `main` branch** and use comments to discuss changes or suggest improvements. 
+
+🔍 Consult these pages on the GitHub docs for more details about the workflow, branches, issues and pull-requests :
+
+- [github-flow](https://docs.github.com/en/get-started/using-github/github-flow)
+- [about-branches](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches)
+- [creating-and-deleting-branches-within-your-repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository)
+- [about-comparing-branches-in-pull-requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-comparing-branches-in-pull-requests)
+- [creating-an-issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue)
+- [about-pull-requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+- [creating-a-pull-request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 
 ## Versioning the sources
 
-Git provides powerful features for tracking and managing source versions through objects called *Tags* and *Releases*.  *Releases* are deployable software iterations you can package and make available for a wider audience to download and use. Releases are based on *Tags*, which mark a specific point in your repository's history. 
+Git provides powerful features for tracking and managing source versions through objects called *Tags* and *Releases*.  *Releases* are deployable software iterations you can package and make available for a wider audience to download and use. *Releases* are based on *Tags*, which mark a specific point in your repository's history. 
 
-In our workflow, we will use *Tags* and *Releases* to mark important steps during the project lifetime.
+In our workflow, we will use *Tags* and *Releases* to flag important steps during the project lifetime.
 These include versions used for specific experiments, final designs intended for production or fabrication, and project states that need to be referenced in technical reports or scientific papers.
 
 Namming the versions follows a standardized procedure that is based on the [Semantic Versioning 2.0.0](https://semver.org/) specification.
@@ -209,17 +219,67 @@ Examples :
 
 💡 *A specific case where multiple versions of a design require separate repositories arises when these versions will be independant, both maintained and will evolve in parallel. In such situations, it is best to create a dedicated Git repository for each version, using names that relates to each others.*
 
-
-
-
-## Structure of repositories
-
-Text.
-
-
 ## Documenting the projects
 
-Text.
+Each project must be described and documented. This can be done through README files, typically located at the root of Git projects, through Wiki pages for more advanced documentation (natively supported by Git tools), or through external documentation included in a `docs` folder at the root of the repository.
+
+### The README file
+
+The **README file is mandatory** and serves as a comprehensive guide for your project. It explains the project's purpose, provides installation and configuration instructions, offers usage guidance, and details how others can contribute.
+
+🔍 Consult this link for best practice about README files : [https://www.makeareadme.com/](https://www.makeareadme.com/)
+
+A README must include the following sections:  
+
+- Description: Short description of the purpose of the project  
+- Installation instructions: Directions for installing the project on various platforms.  
+- Operating instructions: How to use the project effectively.  
+- File manifest: A list of files included in the project directory or archive. 
+- Available versions: A list of source releases and active branches.
+- Changelog: A log of changes, aimed at developers. 
+- Known bugs: A list of existing issues or limitations.
+- Troubleshooting instructions: Tips for resolving common problems.
+- Contact information: Details for reaching the author or distributor.  
+- Credits and acknowledgments: Recognition of contributors and collaborators.  
+- Copyright and licensing information: Legal details about the project's usage rights.    
+
+🔍 Nice examples of README files can be found here : [https://www.readme-templates.com/](https://www.readme-templates.com/)
+
+
+### Long-form and detailled documentation
+
+Additionnal documentation will be included in a `docs/` folder located at the root of the repository. The preferred format for these documents is Markdown, but other file types such as PDF or plain text are also acceptable if necessary.
+
+It is recommended to **avoid using formats that require specialized software**, such as `.docx` (Microsoft Word), `.odt` (OpenOffice), `.xls` (Microsoft Excel), or similar.
+
+The `docs/` folder can contain sub-folder for clarity, such as :
+
+- `docs/reports/` : for general reports
+- `docs/technical/` : for technical documents 
+- `docs/experimentation/` : for experimental results
+- `docs/datasheet/` : to include datasheets or specifications
+- `docs/test/` :  for test reports
+
+When writing your documents in Markdown, you will need to include images (or other external files) alongside the main file. It is recommended to store these files in a folder named `assets/` located at the same level as the main file (e.g. in folder `docs/` or in one of its sub-folder). 
+You can then reference the images within your text using a syntax like: `![](./assets/myimage.png)`.
+
+💡 *By following these guidelines, your documentation will be viewable directly in the GitHub web interface and compatible with MkDocs by simply adding a `mkdocs.yml` file at the root of your repository. This setup enables easy conversion into a static website or export to PDF. For an example, visit [https://github.com/kernythree/minimal-working-example-mkdocs](https://github.com/kernythree/minimal-working-example-mkdocs).*
+
+### Wiki pages (only for public repository)
+
+Each GitHub repository includes a section for hosting documentation, known as the wiki. You can use your repository’s wiki to share detailed content about your project, such as usage instructions, design details, or core principles. While a README file provides a quick overview of your project, a wiki allows you to include additional, more comprehensive documentation.
+
+🔍 Consult this link for more info on GitHub's Wikis : [https://docs.github.com/fr/communities/documenting-your-project-with-wikis/adding-or-editing-wiki-pages](https://docs.github.com/fr/communities/documenting-your-project-with-wikis/adding-or-editing-wiki-pages)
+
+## Structure for the repositories
+
+Structure of repositories are flexible but again they should follow several best practices to ensure consistency and readibility.
+
+- Organize the repository by placing essential files, such as `README.md`, `LICENSE`, and `CONTRIBUTING.md`, at the root for easy access. 
+- Create folders like  `src/` or `code/` for source code, `docs/` for documentation ... and group other related files into meaningful folders such as `data/`, `script/`, `tools/`, `python/`, `docker/`, `build/`, ...
+- Avoid overly deep or complex hierarchies to keep navigation simple and intuitive.
+- Environment-specific configurations, such as `.env` or `settings.json`, should be kept in a dedicated folder, such as `config/`. 
+- Use `.gitignore` to prevent sensitive or unnecessary files, like logs or binaries, from being included in the repository.
 
 ## (Bonus) Tips and useful ressources
 
@@ -262,6 +322,9 @@ git branch my-branch
 
 # switch to that branch (line of development)
 git checkout my-branch
+
+# Creating and switching to a branch in one line
+git checkout -b my-branch
 
 # make changes, for example, edit `file1.md` and `file2.md` using the text editor
 
